@@ -7,23 +7,72 @@
             <i class="fa-solid fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-primary" type="submit">Search</button>
+            <form class="search d-flex me-auto ms-auto">
+                <input class="form-control rounded-0" type="search" placeholder="Search Ideas or Creators"
+                    aria-label="Search Ideas or Creators">
+                <button class="btn btn-outline-primary rounded-0" type="submit"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             <div class="ms-2">
-                <i class="fa-solid fa-circle-user fa-lg"></i>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                        data-bs-display="static" aria-expanded="false">
+                        <span class="bg-info rounded-circle px-2">2</span> <i class="far fa-bell"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                        <li>
+                            <div class="toast-container">
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                                    <div class="toast-header">
+                                        <svg class="bd-placeholder-img rounded me-2" width="20" height="20"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                                            <rect width="100%" height="100%" fill="#007aff"></rect>
+                                        </svg>
+
+                                        <strong class="me-auto">Bootstrap</strong>
+                                        <small class="text-muted">11 mins ago</small>
+                                        <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="toast-body">
+                                        Hello, world! This is a toast message.
+                                    </div>
+                                </div>
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                                    <div class="toast-header">
+                                        <svg class="bd-placeholder-img rounded me-2" width="20" height="20"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                                            <rect width="100%" height="100%" fill="#007aff"></rect>
+                                        </svg>
+
+                                        <strong class="me-auto">Bootstrap</strong>
+                                        <small class="text-muted">11 mins ago</small>
+                                        <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="toast-body">
+                                        Hello, world! This is a toast message.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                        data-bs-display="static" aria-expanded="false">
+                        <i class="fa-solid fa-circle-user fa-lg"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

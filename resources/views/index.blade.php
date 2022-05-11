@@ -9,62 +9,58 @@
 @endsection
 
 @section('content')
-    <div class="carousel-hedaer">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
-                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#555" dy=".3em">First
-                            slide</text>
-                    </svg>
-
-                </div>
-                <div class="carousel-item">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
-                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#666" /><text x="50%" y="50%" fill="#444" dy=".3em">Second
-                            slide</text>
-                    </svg>
-
-                </div>
-                <div class="carousel-item">
-                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
-                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#555" /><text x="50%" y="50%" fill="#333" dy=".3em">Third
-                            slide</text>
-                    </svg>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{asset('image/dummy-banner.jpg')}}" class="d-block w-100" height="500px" alt="{{asset('image/dummy-banner.jpg')}}">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="carousel-item">
+                <img src="{{asset('image/dummy-banner.jpg')}}" class="d-block w-100" height="500px" alt="{{asset('image/dummy-banner.jpg')}}">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('image/dummy-banner.jpg')}}" class="d-block w-100" height="500px" alt="{{asset('image/dummy-banner.jpg')}}">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
     <div class="container">
-        <h1 class="mt-3">Title</h1>
+        <h1 class="mt-3 text-center">The Ideas</h1>
         <div class="my-3">
-            @for ($j = 0; $j < 2; $j++)
+            {{-- @for ($j = 0; $j < 2; $j++)
                 <div class="row">
                     @for ($i = 0; $i < 4; $i++)
                         <div class="col-md-3">
                             <div class="card">
                                 <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
-                                    class="card-img-top" alt="...">
+                                    class="card-img-top" alt="{{asset('image/dummy-banner.jpg')}}">
                                 <div class="card-body">
                                     <div class="info-detail d-flex justify-content-between">
                                         <div>
@@ -87,10 +83,86 @@
                         </div>
                     @endfor
                 </div>
-            @endfor
+            @endfor --}}
+            <ul class="cards">
+                <li>
+                    <a href="" class="card">
+                        <img src="{{ asset('image/dummy-card.jpg') }}" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card__thumb" src="{{ asset('image/dummy-avatar.png') }}" alt="" />
+                                <div class="card__header-text">
+                                    <h3 class="card__title">Jessica Parker</h3>
+                                    <span class="card__status">1 hour ago</span>
+                                </div>
+                            </div>
+                            <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Asperiores, blanditiis?</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="card">
+                        <img src="{{ asset('image/dummy-card.jpg') }}" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card__thumb" src="{{ asset('image/dummy-avatar.png') }}" alt="" />
+                                <div class="card__header-text">
+                                    <h3 class="card__title">kim Cattrall</h3>
+                                    <span class="card__status">3 hours ago</span>
+                                </div>
+                            </div>
+                            <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Asperiores, blanditiis?</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="card">
+                        <img src="{{ asset('image/dummy-card.jpg') }}" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card__thumb" src="{{ asset('image/dummy-avatar.png') }}" alt="" />
+                                <div class="card__header-text">
+                                    <h3 class="card__title">Jessica Parker</h3>
+                                    <span class="card__status">1 hour ago</span>
+                                </div>
+                            </div>
+                            <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Asperiores, blanditiis?</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="card">
+                        <img src="{{ asset('image/dummy-card.jpg') }}" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+                                <img class="card__thumb" src="{{ asset('image/dummy-avatar.png') }}" alt="" />
+                                <div class="card__header-text">
+                                    <h3 class="card__title">kim Cattrall</h3>
+                                    <span class="card__status">3 hours ago</span>
+                                </div>
+                            </div>
+                            <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Asperiores, blanditiis?</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod tempor inviduer. Ut enim ad
-            minim</p>
     </div>
 @endsection
 
