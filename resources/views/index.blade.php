@@ -20,21 +20,21 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{asset('image/dummy-banner.jpg')}}" class="d-block w-100" height="500px" alt="{{asset('image/dummy-banner.jpg')}}">
+                <img src="{{asset('image/dummy-banner2.jpg')}}" class="d-block w-100" alt="{{asset('image/dummy-banner.jpg')}}">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>First slide label</h5>
                     <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="{{asset('image/dummy-banner.jpg')}}" class="d-block w-100" height="500px" alt="{{asset('image/dummy-banner.jpg')}}">
+                <img src="{{asset('image/dummy-banner2.jpg')}}" class="d-block w-100" alt="{{asset('image/dummy-banner.jpg')}}">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Second slide label</h5>
                     <p>Some representative placeholder content for the second slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="{{asset('image/dummy-banner.jpg')}}" class="d-block w-100" height="500px" alt="{{asset('image/dummy-banner.jpg')}}">
+                <img src="{{asset('image/dummy-banner2.jpg')}}" class="d-block w-100" alt="{{asset('image/dummy-banner.jpg')}}">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Third slide label</h5>
                     <p>Some representative placeholder content for the third slide.</p>
@@ -54,12 +54,12 @@
     <div class="container">
         <h1 class="mt-3 text-center">The Ideas</h1>
         <div class="my-3">
-            {{-- @for ($j = 0; $j < 2; $j++)
+            @for ($j = 0; $j < 2; $j++)
                 <div class="row">
                     @for ($i = 0; $i < 4; $i++)
                         <div class="col-md-3">
-                            <div class="card">
-                                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
+                            <div class="card rounded-3">
+                                <img src="{{asset('image/dummy-photo.jpg')}}"
                                     class="card-img-top" alt="{{asset('image/dummy-banner.jpg')}}">
                                 <div class="card-body">
                                     <div class="info-detail d-flex justify-content-between">
@@ -72,10 +72,13 @@
                                         </div>
                                     </div>
                                     <h5 class="card-title">Calculator Sederhana</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted">Software</h6>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                    <h6 class="card-subtitle mb-2 text-muted">
+                                        <img src="{{asset('image/dummy-avatar.png')}}" height="25px" width="25px"class="rounded-circle" alt="...">
+                                        Startnow
+                                    </h6>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of
-                                        the card's content.</p>
+                                        the card's content.</p> --}}
                                     <a href="#" class="btn btn-card mr-2"><i class="fa-solid fa-circle-info"></i> Detail</a>
                                     <a href="#" class="btn btn-card "><i class="fa-solid fa-message"></i> Message</a>
                                 </div>
@@ -83,85 +86,7 @@
                         </div>
                     @endfor
                 </div>
-            @endfor --}}
-            <ul class="cards">
-                <li>
-                    <a href="" class="card">
-                        <img src="{{ asset('image/dummy-card.jpg') }}" class="card__image" alt="" />
-                        <div class="card__overlay">
-                            <div class="card__header">
-                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card__thumb" src="{{ asset('image/dummy-avatar.png') }}" alt="" />
-                                <div class="card__header-text">
-                                    <h3 class="card__title">Jessica Parker</h3>
-                                    <span class="card__status">1 hour ago</span>
-                                </div>
-                            </div>
-                            <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Asperiores, blanditiis?</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="card">
-                        <img src="{{ asset('image/dummy-card.jpg') }}" class="card__image" alt="" />
-                        <div class="card__overlay">
-                            <div class="card__header">
-                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card__thumb" src="{{ asset('image/dummy-avatar.png') }}" alt="" />
-                                <div class="card__header-text">
-                                    <h3 class="card__title">kim Cattrall</h3>
-                                    <span class="card__status">3 hours ago</span>
-                                </div>
-                            </div>
-                            <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Asperiores, blanditiis?</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="card">
-                        <img src="{{ asset('image/dummy-card.jpg') }}" class="card__image" alt="" />
-                        <div class="card__overlay">
-                            <div class="card__header">
-                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card__thumb" src="{{ asset('image/dummy-avatar.png') }}" alt="" />
-                                <div class="card__header-text">
-                                    <h3 class="card__title">Jessica Parker</h3>
-                                    <span class="card__status">1 hour ago</span>
-                                </div>
-                            </div>
-                            <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Asperiores, blanditiis?</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="card">
-                        <img src="{{ asset('image/dummy-card.jpg') }}" class="card__image" alt="" />
-                        <div class="card__overlay">
-                            <div class="card__header">
-                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                    <path />
-                                </svg>
-                                <img class="card__thumb" src="{{ asset('image/dummy-avatar.png') }}" alt="" />
-                                <div class="card__header-text">
-                                    <h3 class="card__title">kim Cattrall</h3>
-                                    <span class="card__status">3 hours ago</span>
-                                </div>
-                            </div>
-                            <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Asperiores, blanditiis?</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
+            @endfor
         </div>
     </div>
 @endsection

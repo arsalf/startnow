@@ -7,7 +7,7 @@
             <i class="fa-solid fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <form class="search d-flex me-auto ms-auto">
+            <form class="search d-flex me-auto ms-auto w-50">
                 <input class="form-control rounded-0" type="search" placeholder="Search Ideas or Creators"
                     aria-label="Search Ideas or Creators">
                 <button class="btn btn-outline-primary rounded-0" type="submit"><i
