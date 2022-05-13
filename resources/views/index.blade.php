@@ -52,7 +52,7 @@
     </div>
 
     <div class="container">
-        <h1 class="mt-3 text-center">The Ideas</h1>
+        <h1 class="mt-3 text-center"><i class="fa-regular fa-compass"></i> Explore Ideas</h1>
         <div class="my-3">
             @for ($j = 0; $j < 2; $j++)
                 <div class="row">
@@ -71,7 +71,7 @@
                                                 <h6>
                                         </div>
                                     </div>
-                                    <h5 class="card-title">Calculator Sederhana</h5>
+                                    <h5 class="card-title">Simple Calculator</h5>
                                     <h6 class="card-subtitle mb-2 text-muted">
                                         <img src="{{asset('image/dummy-avatar.png')}}" height="25px" width="25px"class="rounded-circle" alt="...">
                                         Startnow
