@@ -79,7 +79,7 @@
                                     {{-- <p class="card-text">Some quick example text to build on the card title and make up
                                         the bulk of
                                         the card's content.</p> --}}
-                                    <a href="#" class="btn btn-card mr-2"><i class="fa-solid fa-circle-info"></i> Detail</a>
+                                    <a href="{{route('home.show', 'id')}}" class="btn btn-card mr-2"><i class="fa-solid fa-circle-info"></i> Detail</a>
                                     <a href="#" class="btn btn-card "><i class="fa-solid fa-message"></i> Message</a>
                                 </div>
                             </div>
