@@ -8,7 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/48c190b106.js"></script>
-    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.textcomplete/1.8.0/jquery.textcomplete.js"></script>
+
     @yield('title')
     @yield('css')
 
@@ -21,7 +23,8 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('vendor/jquery/jquery-3.6.0.min.js')}}"></script>
+    {{-- <script src="{{asset('vendor/jquery/jquery-3.6.0.min.js')}}"></script> --}}
+    
     {{-- <script>
         var toastElList = [].slice.call(document.querySelectorAll('.toast'))
         var toastList = toastElList.map(function (toastEl) {
