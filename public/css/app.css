@@ -2,6 +2,10 @@
     --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
 }
 
+body {
+ background-color: #f8f9fa;
+}
+
 .card {
     background: #222;
     border: 1px solid #dd2476;

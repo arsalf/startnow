@@ -32,7 +32,6 @@
                                             preserveAspectRatio="xMidYMid slice" focusable="false">
                                             <rect width="100%" height="100%" fill="#007aff"></rect>
                                         </svg>
-
                                         <strong class="me-auto">Bootstrap</strong>
                                         <small class="text-muted">11 mins ago</small>
                                         <button type="button" class="btn-close" data-bs-dismiss="toast"
