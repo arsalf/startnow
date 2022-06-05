@@ -64,10 +64,20 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $file= $data['filektp'];        
+        $filename= date('YmdHi').$file->getClientOriginalName();
+        $file-> move(public_path('image/ktp'), $filename);        
         return User::create([
+            'role' => 'investor',
+            'username' =>$data['username'],
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'no_ktp' => $data['noktp'],
+            'no_hp' => $data['nohp'],
+            'birthday' => $data['tgl_lahir'],
+            'file_ktp' => $filename,
+            'alamat' => $data['alamat']
         ]);
     }
 }

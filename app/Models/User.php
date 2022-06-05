@@ -12,17 +12,28 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $collection = 'investor';
+    // protected $collection = 'investor';
+    
+    protected $primaryKey = 'username';
+    
+    protected $dates = ['birthday'];
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
-    protected $fillable = [
+    public $fillable = [
+        'username',        
         'name',
-        'email',
+        'email',           
+        'birthday',
         'password',
+        'no_ktp',
+        'file_ktp',
+        'role',
+        'no_hp',
+        'alamat'
     ];
 
     /**
@@ -31,6 +42,9 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
+        'role',
+        'no_ktp',
+        'file_ktp',
         'password',
         'remember_token',
     ];
@@ -43,4 +57,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function startups()
+    {
+        return $this->hasMany(Startup::class, 'owner');
+    }
 }

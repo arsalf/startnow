@@ -28,6 +28,7 @@ class HomeController extends Controller
 
     public function show($id)
     {
+        
         return view('detail');
     }
 

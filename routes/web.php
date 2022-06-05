@@ -3,7 +3,10 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\StartupsController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +28,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/home', HomeController::class);
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('users', UsersController::class);
+    Route::resource('startups', StartupsController::class);
+});

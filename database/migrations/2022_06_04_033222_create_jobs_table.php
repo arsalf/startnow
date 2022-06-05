@@ -13,8 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->id();
+        Schema::create('jobs', function (Blueprint $table) {
+            $table->index(
+                'name',
+                null,
+                null,
+                [
+                    'sparse' => false,
+                    'unique' => true,
+                    'background' => true,
+                ]
+            );
             $table->timestamps();
         });
     }
@@ -26,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('jobs');
     }
 };
