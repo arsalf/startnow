@@ -1,5 +1,9 @@
 @extends('layout.master')
 
+@section('css')
+
+@endsection
+
 @section('content')
     <div class="container mt-3">
         <div class="row justify-content-center">
@@ -62,12 +66,13 @@
                             <div class="row mb-3">
                                 <label for="tgl_lahir"
                                     class="col-md-4 col-form-label text-md-end">{{ __('Tanggal Berdiri') }}</label>
-                                    @php
-                                        $time = strtotime($startup->tanggal_berdiri);
-                                        $newformat = date('Y-m-d', $time);                                        
-                                    @endphp
+                                @php
+                                    $time = strtotime($startup->tanggal_berdiri);
+                                    $newformat = date('Y-m-d', $time);
+                                @endphp
                                 <div class="col-md-6 d-flex align-items-center">
-                                    <input id="tgl_lahir" type="date" class="form-control" name="tgl_lahir" value="{{$newformat}}" required>
+                                    <input id="tgl_lahir" type="date" class="form-control" name="tgl_lahir"
+                                        value="{{ $newformat }}" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -99,4 +104,10 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('js')
+    <script>
+
+    </script>
 @endsection

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ProductDetail;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -28,8 +29,8 @@ class HomeController extends Controller
 
     public function show($id)
     {
-        
-        return view('detail');
+        $product = ProductDetail::find($id);        
+        return view('details_product', ['product' => $product]);
     }
 
 }

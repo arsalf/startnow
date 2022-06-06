@@ -35,6 +35,12 @@
                             </div>
                         </div>
                         <div class="row mb-3">
+                            <label for="thumbnail" class="col-md-4 col-form-label text-md-end">{{ __('Thumbnail') }}</label>
+                            <div class="col-md-6 d-flex align-items-center">
+                                <input id="thumbnail" type="file" class="form-control" name="thumbnail" required >
+                            </div>
+                        </div> 
+                        <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Kantor') }}</label>
                             <div class="col-md-6 d-flex align-items-center">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">

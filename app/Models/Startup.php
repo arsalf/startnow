@@ -20,6 +20,7 @@ class Startup extends Model
         'owner',        
         'name',
         'deskripsi',
+        'thumbnail',
         'email',           
         'tanggal_berdiri',        
         'no_hp',
@@ -48,6 +49,6 @@ class Startup extends Model
 
     public function products()
     {
-        return $this->hasMany(Product::class, "startup");
+        return $this->hasMany(Product::class, "startup_id");
     }
 }

@@ -7,13 +7,14 @@ use Jenssegers\Mongodb\Eloquent\Model;
 
 class Product extends Model
 {
-    use HasFactory;
-    
-    public $fillable = [
-        'startup',        
+    use HasFactory;    
+
+    public $fillable = [        
+        'startup_id',           
         'title',
         'kategori',
-        'likers',           
+        'likers',         
+        'images' ,
         'invests'        
     ];
 

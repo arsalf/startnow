@@ -27,7 +27,7 @@ class StartupsController extends Controller
     public function create()
     {
         //
-        return view('registerstartups');
+        return view('createstartups');
     }
 
     /**
@@ -39,10 +39,15 @@ class StartupsController extends Controller
     public function store(Request $data)
     {
         //          
+        $file = $data->thumbnail; 
+        $filename= date('YmdHi').$file->getClientOriginalName();
+        $file-> move(public_path('image/thumbnail'), $filename);  
+
         $startup = Startup::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'owner'     => Auth::user()->username,
+            'thumbnail' => $filename,
             'deskripsi' => $data['deskripsi'],
             'no_hp' => $data['nohp'],
             'tanggal_berdiri' => $data['tgl_lahir'],

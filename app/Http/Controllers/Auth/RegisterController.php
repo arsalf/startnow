@@ -64,6 +64,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        
+        // foreach($request->file('filenames') as $file)
+        // {
+        //     $name = time().'.'.$file->extension();
+        //     $file->move(public_path().'/files/', $name);  
+        //     $data[] = $name;  
+        // }
         $file= $data['filektp'];        
         $filename= date('YmdHi').$file->getClientOriginalName();
         $file-> move(public_path('image/ktp'), $filename);        
