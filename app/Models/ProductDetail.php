@@ -28,4 +28,17 @@ class ProductDetail extends Product
         $this->mergeFillable(['product_id', 'invests', 'proposal_files', 'modal', 'comments']);
     }
 
+    public function product()
+    {
+        return $this->belongsTo(Product::class, "_id");
+    }
+    public function productTitle()
+    {
+        return $this->belongsTo(Product::class, "title");
+    }
+    public function productKategori()
+    {
+        return $this->belongsTo(Product::class, "kategori");
+    }
+
 }

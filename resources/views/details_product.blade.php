@@ -3,6 +3,14 @@
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery-comments.css') }}">
+    <style>
+        .helper {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+    </style>
 @endsection
 
 @section('title')
@@ -38,13 +46,15 @@
                                 $count = 0;
                             @endphp
                             @foreach ($product->images as $image)
-                                <div class="carousel-item @if ($count == 0) active @endif">
+                                <div class="carousel-item @if ($count == 0) active @endif"
+                                    style="text-align: center;">
+                                    <span class="helper"></span>
                                     <img src="{{ asset('image/products/' . $image) }}"
                                         class="d-block img-fluid rounded-start mx-auto"
                                         alt="image_product{{ $count }}" style="  height: auto;
-                                                        width: 100%;
-                                                      /* even more control with max-width */
-                                                        max-width: 400px;max-height:400px;">
+                                                                width: 100%;
+                                                              /* even more control with max-width */
+                                                                max-width: 400px;max-height:400px;">
                                 </div>
                                 @php
                                     $count += 1;
@@ -108,9 +118,19 @@
                             </div>
 
                             <div class="invest d-flex justify-content-center">
-                                <button type="button" class="btn btn-primary">
-                                    Invest Now
-                                </button>
+                                @if ($product->startup->owner == Auth::user()->username)
+                                    <a class="text-decoration-none text-white" href="{{route('products.edit', [$product->startup->id, $product->product_id])}}">
+                                        <button type="button" class="btn btn-primary">
+                                            Manage
+                                        </button>
+                                    </a>                                    
+                                @else
+                                    <a href="{{route('invest.add', $product->product_id)}}">
+                                        <button type="button" class="btn btn-primary">
+                                            Invest Now
+                                        </button>    
+                                    </a>
+                                @endif
                             </div>
                         </div>
                     </div>

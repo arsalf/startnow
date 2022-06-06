@@ -4,6 +4,18 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery-comments.css') }}">
     <style>
+        .box-img {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+        }
+
         .fa-solid.fa-heart:hover {
             color: red;
         }

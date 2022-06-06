@@ -14,6 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('startups', function (Blueprint $table) {
+            $table->index(
+                'name',
+                null,
+                null,
+                [
+                    'sparse' => false,
+                    'unique' => true,
+                    'background' => true,
+                ]
+                );
             $table->timestamps();
         });
     }

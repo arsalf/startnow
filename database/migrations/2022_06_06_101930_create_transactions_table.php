@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('product_details', function (Blueprint $table) {
+        Schema::create('transactions', function (Blueprint $table) {
             $table->index(
-                'product_id',
+                'token',
                 null,
                 null,
                 [
@@ -35,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_details');
+        Schema::dropIfExists('transactions');
     }
 };

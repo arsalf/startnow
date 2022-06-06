@@ -32,4 +32,19 @@ class Product extends Model
     {
         return $this->embedsMany(User::class);
     }
+
+    public function productDetail()
+    {
+        return $this->hasOne(ProductDetail::class, "product_id");
+    }
+
+    public function productDetailTitle()
+    {
+        return $this->hasOne(ProductDetail::class, "title");
+    }
+    
+    public function productDetailKategori()
+    {
+        return $this->hasOne(ProductDetail::class, "kategori");
+    }
 }

@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StartupsController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,7 +22,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return redirect('/home');
 });
 
 Route::get('/post/{slug}', [PostController::class, 'show']);
@@ -34,6 +35,10 @@ Route::resource('/home', HomeController::class);
 Route::middleware(['auth'])->group(function () {
     Route::resource('users', UsersController::class);
     Route::resource('startups', StartupsController::class);
+    route::get('investasi/{product_id}/add', [TransactionController::class, 'add'])->name('invest.add');
+    route::post('investasi/{product_id}/add', [TransactionController::class, 'store'])->name('invest.store');
+    route::get('simulasi-pembayaran', [TransactionController::class, 'simulasi'])->name('invest.simulasi');
+    route::put('simulasi-pembayaran', [TransactionController::class, 'bayar'])->name('invest.bayar');
     Route::get('startups/{id}/product/add', [ProductController::class, 'create'])->name("products.create");
     Route::get('startups/{startup_id}/product/{product_id}/edit', [ProductController::class, 'edit'])->name("products.edit");
     Route::put('startups/{startup_id}/product/{product_id}/edit', [ProductController::class, 'update'])->name("products.update");

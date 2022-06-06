@@ -30,8 +30,7 @@ class User extends Authenticatable
         'birthday',
         'password',
         'no_ktp',
-        'file_ktp',
-        'role',
+        'file_ktp',        
         'no_hp',
         'alamat'
     ];
